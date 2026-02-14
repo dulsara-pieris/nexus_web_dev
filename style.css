@@ -10,7 +10,10 @@
         --midnight: #1a1a20;
         --grid-tint: rgba(78, 205, 196, 0.15);
 }
-
+@font-face {
+        font-family: 'Orbitron';
+        src: url('fonts/orbitron/Orbitron-VariableFont_wght.ttf');
+}
 * {
         margin: 0;
         padding: 0;
