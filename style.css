@@ -2,13 +2,15 @@
         --warm-orange: #ff6b35;
         --blue-light: #4ecdc4;
         --orange: #ff8364;
-        ---light-blue: #95e1d3;
+        --light-blue: #95e1d3;
         --txt-color: #f9f7e8;
         --dark-orange: #f4a261;
         --gray: #2d2d34;
         --dark: #1a1a20;
         --grid: rgba(78, 205, 196, 0.15);
 }
+
+
 @font-face {
         font-family: 'Orbitron';
         src: url('fonts/orbitron/Orbitron-VariableFont_wght.ttf');
@@ -146,7 +148,7 @@ nav a:hover::after {
 
 .hero p {
         font-size: 1.3rem;
-        color: var(---light-blue);
+        color: var(--light-blue);
         margin-bottom: 3rem;
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -165,7 +167,7 @@ nav a:hover::after {
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        transition: all 0.3s ease;
+        transition: all 0.9s ease;
         border-radius: 4px;
 }
 
@@ -177,7 +179,7 @@ nav a:hover::after {
         width: 100%;
         height: 100%;
         background: var(--blue-light);
-        transition: left 0.3s ease;
+        transition: left 3s ease;
         z-index: -1;
 }
 
@@ -406,8 +408,8 @@ body::after {
                 var(--blue-light) 40px,
                 transparent 40px,
                 transparent 80px,
-                var(---light-blue) 80px,
-                var(---light-blue) 120px,
+                var(--light-blue) 80px,
+                var(--light-blue) 120px,
                 transparent 120px,
                 transparent 160px
         );
