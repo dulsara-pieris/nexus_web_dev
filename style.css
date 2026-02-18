@@ -1,29 +1,34 @@
 :root {
         --warm-orange: #ff6b35;
-        --ocean-teal: #4ecdc4;
-        --sunset-coral: #ff8364;
-        --fresh-mint: #95e1d3;
-        --soft-cream: #f9f7e8;
-        --deep-navy: #1a535c;
-        --vintage-mustard: #f4a261;
-        --charcoal: #2d2d34;
-        --midnight: #1a1a20;
-        --grid-tint: rgba(78, 205, 196, 0.15);
+        --blue-light: #4ecdc4;
+        --orange: #ff8364;
+        ---light-blue: #95e1d3;
+        --txt-color: #f9f7e8;
+        --dark-orange: #f4a261;
+        --gray: #2d2d34;
+        --dark: #1a1a20;
+        --grid: rgba(78, 205, 196, 0.15);
 }
 @font-face {
         font-family: 'Orbitron';
         src: url('fonts/orbitron/Orbitron-VariableFont_wght.ttf');
 }
+
+@font-face {
+        font-family: 'saiba-45';
+        src: url('fonts/saiba-45/SAIBA-45.ttf');
+}
 * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Orbitron', 'Courier New', Courier, monospace;
 }
 
 body {
         font-family: 'Share Tech Mono', monospace;
-        background: var(--charcoal);
-        color: var(--soft-cream);
+        background: var(--gray);
+        color: var(--txt-color);
         overflow-x: hidden;
         cursor: default;
 }
@@ -35,12 +40,12 @@ body {
         width: 100%;
         height: 100%;
         background:
-                linear-gradient(90deg, var(--grid-tint) 1px, transparent 1px),
-                linear-gradient(0deg, var(--grid-tint) 1px, transparent 1px);
-        background-size: 50px 50px;
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+                linear-gradient(0deg, var(--grid) 1px, transparent 1px);
+        background-size: 60px 60px;
         pointer-events: none;
         z-index: 0;
-        opacity: 0.5;
+        opacity: 0.8;
 }
 
 .scanline {
@@ -63,18 +68,18 @@ header {
         position: relative;
         z-index: 10;
         padding: 2rem 4rem;
-        background: linear-gradient(180deg, var(--midnight) 0%, transparent 100%);
-        border-bottom: 3px solid var(--ocean-teal);
+        background: linear-gradient(180deg, var(--dark) 0%, transparent 100%);
+        border-bottom: 3px solid var(--blue-light);
         display: flex;
         justify-content: space-between;
         align-items: center;
 }
 
 .logo {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'saiba-45', 'Orbitron', sans-serif;
         font-size: 2rem;
         font-weight: 900;
-        background: linear-gradient(45deg, var(--warm-orange), var(--sunset-coral), var(--vintage-mustard));
+        background: linear-gradient(45deg, var(--warm-orange), var(--orange), var(--dark-orange));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -87,7 +92,7 @@ nav {
 }
 
 nav a {
-        color: var(--ocean-teal);
+        color: var(--blue-light);
         text-decoration: none;
         text-transform: uppercase;
         font-size: 0.9rem;
@@ -103,12 +108,12 @@ nav a::after {
         left: 0;
         width: 0;
         height: 2px;
-        background: var(--sunset-coral);
+        background: var(--orange);
         transition: width 0.3s ease;
 }
 
 nav a:hover {
-        color: var(--sunset-coral);
+        color: var(--orange);
 }
 
 nav a:hover::after {
@@ -128,16 +133,11 @@ nav a:hover::after {
 }
 
 .hero h1 {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'saiba-45', 'Orbitron', sans-serif;
         font-size: 5rem;
         font-weight: 900;
         margin-bottom: 1rem;
-        background: linear-gradient(
-                135deg,
-                var(--warm-orange) 0%,
-                var(--sunset-coral) 50%,
-                var(--vintage-mustard) 100%
-        );
+        background: linear-gradient(135deg, var(--warm-orange) 0%, var(--orange) 50%, var(--dark-orange) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -146,7 +146,7 @@ nav a:hover::after {
 
 .hero p {
         font-size: 1.3rem;
-        color: var(--fresh-mint);
+        color: var(---light-blue);
         margin-bottom: 3rem;
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -154,8 +154,8 @@ nav a:hover::after {
 
 .cta-button {
         background: transparent;
-        border: 3px solid var(--ocean-teal);
-        color: var(--ocean-teal);
+        border: 3px solid var(--blue-light);
+        color: var(--blue-light);
         padding: 1.2rem 3rem;
         font-family: 'Orbitron', sans-serif;
         font-size: 1.1rem;
@@ -176,13 +176,13 @@ nav a:hover::after {
         left: -100%;
         width: 100%;
         height: 100%;
-        background: var(--ocean-teal);
+        background: var(--blue-light);
         transition: left 0.3s ease;
         z-index: -1;
 }
 
 .cta-button:hover {
-        color: var(--midnight);
+        color: var(--dark);
         box-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
 }
 
@@ -216,7 +216,7 @@ nav a:hover::after {
 
 .exhibit-card {
         background: linear-gradient(135deg, rgba(78, 205, 196, 0.08) 0%, rgba(255, 107, 53, 0.08) 100%);
-        border: 2px solid var(--ocean-teal);
+        border: 2px solid var(--blue-light);
         padding: 2rem;
         position: relative;
         overflow: hidden;
@@ -232,7 +232,6 @@ nav a:hover::after {
         left: -2px;
         right: -2px;
         bottom: -2px;
-        background: linear-gradient(45deg, var(--ocean-teal), var(--warm-orange), var(--sunset-coral));
         z-index: -1;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -251,12 +250,12 @@ nav a:hover::after {
 }
 
 .exhibit-number {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'saiba-45', 'Orbitron', sans-serif;
         font-size: 4rem;
         font-weight: 900;
         color: rgba(78, 205, 196, 0.15);
         position: absolute;
-        top: -1rem;
+        top: 0.5rem;
         right: 1rem;
         z-index: 0;
 }
@@ -271,7 +270,7 @@ nav a:hover::after {
 }
 
 .exhibit-card p {
-        color: var(--soft-cream);
+        color: var(--txt-color);
         line-height: 1.6;
         position: relative;
         z-index: 1;
@@ -283,8 +282,8 @@ nav a:hover::after {
         z-index: 5;
         padding: 6rem 4rem;
         background: linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.05) 50%, transparent 100%);
-        border-top: 3px solid var(--sunset-coral);
-        border-bottom: 3px solid var(--sunset-coral);
+        border-top: 3px solid var(--orange);
+        border-bottom: 3px solid var(--orange);
 }
 
 .info-grid {
@@ -305,28 +304,11 @@ nav a:hover::after {
 }
 
 .info-block p {
-        color: var(--soft-cream);
+        color: var(--txt-color);
         line-height: 1.8;
         margin-bottom: 0.8rem;
         opacity: 0.9;
 }
-
-footer {
-        position: relative;
-        z-index: 5;
-        padding: 3rem 4rem;
-        text-align: center;
-        background: var(--midnight);
-        border-top: 3px solid var(--vintage-mustard);
-}
-
-footer p {
-        color: var(--fresh-mint);
-        font-size: 0.9rem;
-        letter-spacing: 2px;
-        opacity: 0.7;
-}
-
 .floating-shape {
         position: fixed;
         border: 2px solid;
@@ -338,7 +320,7 @@ footer p {
 .shape-1 {
         width: 200px;
         height: 200px;
-        border-color: var(--ocean-teal);
+        border-color: var(--blue-light);
         top: 10%;
         left: 10%;
         transform: rotate(45deg);
@@ -348,7 +330,7 @@ footer p {
 .shape-2 {
         width: 150px;
         height: 150px;
-        border-color: var(--sunset-coral);
+        border-color: var(--orange);
         top: 60%;
         right: 15%;
         border-radius: 50%;
@@ -357,7 +339,7 @@ footer p {
 .shape-3 {
         width: 100px;
         height: 100px;
-        border-color: var(--vintage-mustard);
+        border-color: var(--dark-orange);
         bottom: 20%;
         left: 20%;
         transform: rotate(30deg);
@@ -402,8 +384,8 @@ body::after {
                 var(--warm-orange) 40px,
                 transparent 40px,
                 transparent 80px,
-                var(--sunset-coral) 80px,
-                var(--sunset-coral) 120px,
+                var(--orange) 80px,
+                var(--orange) 120px,
                 transparent 120px,
                 transparent 160px
         );
@@ -420,12 +402,12 @@ body::after {
         height: 8px;
         background: repeating-linear-gradient(
                 90deg,
-                var(--ocean-teal) 0px,
-                var(--ocean-teal) 40px,
+                var(--blue-light) 0px,
+                var(--blue-light) 40px,
                 transparent 40px,
                 transparent 80px,
-                var(--fresh-mint) 80px,
-                var(--fresh-mint) 120px,
+                var(---light-blue) 80px,
+                var(---light-blue) 120px,
                 transparent 120px,
                 transparent 160px
         );
