@@ -19,6 +19,10 @@
 	font-family: "saiba-45";
 	src: url("fonts/saiba-45/SAIBA-45.ttf");
 }
+@font-face {
+	font-family: "sparks";
+	src: url("fonts/sparks/Neon\ Spark.otf");
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -161,6 +165,7 @@ nav a:hover::after {
 	margin-bottom: 3rem;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	font-family: "orbitron", "Courier New", Courier, monospace;
 }
 
 .cta-button {
@@ -330,19 +335,21 @@ nav a:hover::after {
 }
 .shape {
 	position: fixed;
-	border: 2px solid;
+	/* border: 2px solid; */
 	opacity: 0.1;
 	z-index: 1;
 	pointer-events: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
 .shape-1 {
-	width: 200px;
-	height: 200px;
-	border-color: var(--blue-light);
+	background-image: url("images/shape1.png");
+	width: 800px;
+	height: 800px;
 	top: 10%;
-	left: 10%;
-	border-radius: 20px;
+	left: 0%;
 	animation: shape-one 12s ease-in-out infinite alternate;
 }
 
@@ -365,12 +372,12 @@ nav a:hover::after {
 }
 
 .shape-2 {
-	width: 150px;
-	height: 150px;
+	background-image: url("images/shape2.png");
+	width: 450px;
+	height: 450px;
 	border-color: var(--orange);
 	top: 60%;
-	right: 15%;
-	border-radius: 50%;
+	right: 5%;
 	animation: shape-two 20s ease-in-out infinite alternate;
 }
 
@@ -393,11 +400,12 @@ nav a:hover::after {
 }
 
 .shape-3 {
-	width: 100px;
-	height: 100px;
+	background-image: url("images/shape2.png");
+	width: 400px;
+	height: 400px;
 	border-color: var(--dark-orange);
-	bottom: 20%;
-	left: 20%;
+	bottom: 50%;
+	left: 50%;
 	border-radius: 15px;
 	animation: shape-three 10s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
 }
@@ -557,4 +565,40 @@ body::after {
 	.info-section {
 		padding: 3rem 2rem;
 	}
+}
+
+.timeline {
+	position: relative;
+	max-width: 500px;
+	margin: 100px 5%;
+}
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: 4px;
+	background-color: var(--warm-orange);
+	top: 0;
+	bottom: 0;
+	left: 110%;
+	transform: translateX(-50%);
+}
+.retro-box {
+	width: 100%;
+	height: 200px;
+	background-color: #3f3f3faa;
+	border-radius: 20px;
+	border: 2px solid var(--warm-orange);
+	margin: 20px;
+	padding: 20px;
+}
+.right-retro {
+	position: relative;
+	left: 0;
+	text-align: right;
+}
+
+.right-retro {
+	position: relative;
+	left: 110%;
+	text-align: left;
 }
