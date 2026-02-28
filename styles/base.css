@@ -47,6 +47,7 @@ body::before {
 	 inset: 0;
 	background-image: url('../assests/images/scanlines.png');
 	pointer-events: none;
+	 opacity: .74;
 	content: "";
 	z-index: 9999;
  }
