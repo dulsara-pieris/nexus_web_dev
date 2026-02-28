@@ -1,0 +1,134 @@
+
+/* importing some componets like boot and animated images those stuff to maintainebilty */
+@import url('components/boot.css');
+@import url('components/images.css');
+@import url('components/navbar.css');
+@import url('components/transition.css');
+
+/* colours used mainly in the musium web website promary colour is black but changes bit in the time so dosen't include */
+:root {
+	--musium-colour-secondery: #34fff1;
+ 	--musium-orange-colour: #ff4704;
+	--lighter-musium-orange: #ff714e;
+}
+
+/*custom fonts with retro futurastic look*/
+
+/* orbitorn for pharagraphs and things fututrastic not pixalated readble */
+@font-face {font-family: 'Orbitron';src: url('../assests/fonts/orbitron/Orbitron-VariableFont_wght.ttf');}
+
+
+ /* Used only in the h1 on the landing page because hard to read but give very retro feel */
+@font-face {font-family: 'saiba';src: url('../assests/fonts/saiba-45/SAIBA-45.ttf');}
+
+
+/* 8Bit font used circle because the gap can be seen square one cannot see the gap in the sqauares */
+@font-face {font-family: 'alvera-bold';	src: url('../assests/fonts/alvera/AlveraDEMO-BoldCircle.ttf');}
+@font-face { font-family: 'alvera'; src: url('../assests/fonts/alvera/AlveraDEMO-RegularCircle.ttf');}
+
+ * {
+	margin: 0;
+	padding: 0;
+	 box-sizing: border-box;
+ 	image-rendering: pixelated !important;
+}
+html {scroll-behavior: smooth;}
+body {
+	/* background-color: #000; */
+	color: #f9f7e8;
+	overflow-x: hidden;/*for small monitors the aimated images are overflowing so fixed it*/
+	cursor: none;
+ }
+
+ 
+/* overlay scan line for old crt monitor effect */
+body::before {
+	position: fixed;
+	 inset: 0;
+	background-image: url('../assests/images/scanlines.png');
+	pointer-events: none;
+	content: "";
+ }
+/* overlay to make thee center bit greanish bit black and further part blackish */
+body::after {
+	background: radial-gradient( ellipse at center, #053e00 0%,#0f0f0f 58%);
+	content: '';
+	position: fixed;
+ 	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	 
+	pointer-events: none;
+ 	z-index: -1;
+	border-bottom: 3px solid var(--musium-orange-colour);
+}
+/* custom cursor overlay not the actuall cursor*/
+#cursor {
+	position: fixed;
+	top: -4px;
+	left: 0px;
+ 	 width: 50px;
+	
+	z-index: 999;
+	 height: 50px;
+	background: url('../assests/images/hand-cursor-mouse-symbol-vector-illustration.png');
+	background-repeat: no-repeat;
+
+	background-position: center center;
+	background-size: contain;
+
+	align-items: center;
+	pointer-events: none;
+ 	transition: transform 0.0001s ease;
+	
+}
+  /* Trail dots */
+.trail {
+	position:absolute;
+	width:8px; height:8px;
+	background:var(--musium-orange-colour);
+	border-radius:50%;
+
+	pointer-events:none;
+	mix-blend-mode:screen;
+	
+	opacity:0.9;
+	box-shadow: 0 0 6px var(--lighter-musium-orange), 0 0 12px var(--musium-orange-colour), 0 0 18px var(--musium-colour-secondery);
+	animation: fadetrail 0.5s forwards;
+	z-index: 999;
+}
+
+  @keyframes fadeTrail {
+	from { opacity:0.75; transform:scale(1); }
+	to { opacity:0; transform:scale(0); }
+  }
+
+
+/* making the web site responsive */
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		gap: 2rem;
+		padding: 2rem;
+	}
+	nav {gap: 1.5rem;}
+
+	.landing-section h1 { font-size: 3rem;}
+	.landing-section p {font-size: 1rem;}
+	.section-title {font-size: 2rem;}
+	
+	.musium-inside { padding: 3rem 2rem;}
+	.special-events-timeline:nth-child(odd) {left: 0;}
+	.special-events-timeline:nth-child(even) {left: 0;}
+	.special-events-timeline {
+
+		margin-bottom: 30px;
+		top: 10vh;
+
+	}
+	.timeline::after {
+		position: absolute;
+		right: 10px;
+	}
+}

@@ -1,0 +1,63 @@
+/* boot screan overlay to add black layer abouve the other elements */
+#boot-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	font-family: 'alvera-bold', 'Courier New';
+	color: #00ff9f;
+	text-shadow: 0 0 5px #00ff9f;
+	overflow: hidden;
+	z-index: 9999;
+}
+#boot-screen::before {
+	position: fixed;
+	 inset: 0;
+	pointer-events: none;
+	background-image: url('../../assests/images/scanlines.png');
+	content: "";
+	z-index: 10000;
+ }
+
+#boot-screen::after {
+	background: radial-gradient( ellipse at center, #053e00 0%,#202020 88%);
+	content: '';
+	position: fixed;
+ 	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	 
+	pointer-events: none;
+ 	z-index: -1;
+	border-bottom: 3px solid var(--musium-orange-colour);
+}
+.crt-cover {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	background-image: url('../../assests/images/bezel.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 999999;
+	background-position: center center;
+}
+#boot-screen img {
+	position: relative;
+	top: 15%;
+	left: 5%;
+	filter: grayscale();
+	opacity: .8;
+}
+#typewriter {
+	position: absolute;
+	 top: 10%;
+	left: 5%;
+
+	font-size: 1.7rem;
+	line-height: 1.4;
+}

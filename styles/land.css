@@ -1,0 +1,67 @@
+
+/* landing section large h1 and inside it added a gif to more live feel and button linked to time line page */
+.landing-section {
+	 position: relative;
+	top: 10vh;
+	z-index: 5;
+	 min-height: 80vh;
+ 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	 text-align: center;
+	padding: 4rem 2rem;
+}
+
+.landing-section h1 {
+	 font-family: 'saiba';
+	font-size: 8rem;
+	font-weight: 900;
+	margin-bottom: 1rem;
+ 	-webkit-background-clip: text;
+	line-height: 1.1;
+	 background-image: url('../assests/images/h1bg.gif');
+	backdrop-filter: grayscale();
+	background-size: cover;
+	background-position: -50%;
+	color: transparent; /*for firefox and zen*/
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	-moz-text-fill-color: transparent; /* fallbak for firefox and zen browser*/
+ 	
+	text-shadow: 0 0 10px #ffea004d, 0 0 20px #ff6b3533;
+	-webkit-text-stroke: 3px var(--musium-orange-colour); 
+	/* text-shadow: 5px 5px 1px #ff00ff, 10px 10px 1px #0f0, 15px 15px 1px var(--musium-orange-colour); */
+}
+
+.landing-section p {
+	font-size: 1.3rem;
+	 color: #00fecf;
+	margin-bottom: 3rem;
+	
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	
+	font-family: 'orbitron', 'Courier New';
+}
+
+.timeline-button {
+	color:  var(--musium-colour-secondery);
+	 padding: .3rem 3rem;
+	font-family: 'alvera-bold', 'Courier New';
+	font-size: 1.6rem;
+	
+	font-weight: 700;
+  	text-transform: uppercase;
+	
+	letter-spacing: 3px;
+ 	cursor: none;
+	overflow: hidden;
+	-webkit-text-stroke: 1px #000;
+	transition: .3s all ease;
+  	background-color: var(--musium-colour-secondery) !important;
+	border: 3px solid var(--musium-orange-colour);
+	position: relative;
+}
+
+.timeline-button:hover {box-shadow: 10px 10px 1px var(--musium-orange-colour)}

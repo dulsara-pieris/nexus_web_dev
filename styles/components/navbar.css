@@ -1,0 +1,47 @@
+
+/* navigation bar for the musium  used 8bit looking font for links*/
+header {
+	position: fixed;
+	z-index: 99 !important; /*for no reason other elments went over it*/
+	top: 0!important;
+	width: 100%;
+ 	z-index: 1;
+	padding: 1.5rem 4rem;
+  	background: transparent;
+	
+	background: #171717;
+	border-bottom: 3px solid var(--musium-colour-secondery);
+ 	justify-content: space-between;
+
+	box-shadow: 0 0 20px var(--musium-colour-secondery);
+	display: flex;
+ 	align-items: center;
+}
+/* TODO: I think I messed up some thing it just don't work */
+.logo {
+	position: relative !important;
+	width: 100px !important;
+	width: 100px !important;
+	background: url('images/h1bg.gif');
+ 	background-color: #fff;/*for testing only*/
+}
+nav {
+	
+	display: flex;
+	 gap: 3rem;
+}
+
+nav a {
+	color: var(--musium-colour-secondery);
+	text-decoration: none;
+ 	text-transform: uppercase;
+	letter-spacing: 2px;
+ 	 position: relative;
+	transition: all .001s ease;
+	font-family: 'alvera-bold';
+	font-size:  1.5rem;
+	cursor: none; /*added because default cursor shows up with my cursor*/
+	-webkit-user-drag: none;
+}
+
+nav a:hover {color: var(--lighter-musium-orange);}

@@ -1,0 +1,59 @@
+
+/* timeline page in center added bar and left and right of it added main things happended in the computer past */
+
+/* contaniner of the boxes and the whole time line */
+.timeline {
+	position: relative;
+	 top: 10vh;
+	
+	 width: 800px;
+	margin: 100px auto;
+}
+
+.timeline::before {
+	content: "";
+	
+	 left: 50%;
+	top: 0;
+	  width: 4px;
+	
+	  height: 100%;
+	background: var(--musium-orange-colour);
+	transform: translateX(-50%);
+	position: absolute;
+	box-shadow: 0 0 10px var(--musium-orange-colour);
+}
+
+.special-events-timeline {
+	position: relative;
+	
+	width: 45%;
+	 padding: 20px;
+	
+	 margin: 40px 0;
+	background: #1f1f1f;
+	border: 2px solid var(--musium-colour-secondery);
+	font-family: 'Orbitron';
+	 margin-bottom: 100px;
+}
+.special-events-timeline h1{
+	font-size: 1.8rem;
+	
+	font-family: 'alvera','Courier New' !important;
+	text-shadow: 2px 2px 1px var(--musium-orange-colour), 4px 4px 1px var(--musium-colour-secondery);
+}
+/* left side box of the timeline */
+.special-events-timeline:nth-child(odd) {
+	left: 0;
+	text-align: right;
+}
+
+/* right side timeline box */
+.special-events-timeline:nth-child(even) {
+	left: 55%;
+	 text-align: left;
+}
+.special-events-timeline:last-child {
+	margin-bottom: 100px;
+	 gap: 100px;
+}

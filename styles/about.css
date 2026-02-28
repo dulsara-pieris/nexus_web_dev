@@ -1,0 +1,84 @@
+/* box with explaining things in the musium in about page */
+.musium-inside {
+	position: relative;
+  	 z-index: 5;
+	 top: 8vh; /*coming over the border line  */
+ 	padding: 6rem 4rem;
+ 	
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.section-title {
+	font-family: 'alvera-bold', 'Courier New';
+	font-size: 3.8rem;
+	font-weight: 900;
+	 text-align: center;
+ 	margin-bottom: 4rem;
+
+ 	color: var(--musium-orange-colour);
+	 letter-spacing: 4px;
+} 
+
+
+/* Slight horizontal color shifts */
+.section-title::before {
+	left: 2px;
+	clip: rect(0, auto, 60%, 0);
+	animation: glitchTop .5s infinite linear alternate-reverse;
+}
+
+.section-title::after {
+	left: -2px;
+	clip: rect(40%, auto, 100%, 0);
+	animation: glitchBottom .6s infinite linear alternate-reverse;
+}
+
+
+.musium-inside-box-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 3rem;
+}
+
+.aboutTheMusium{
+	 background: linear-gradient( 135deg, #4ecdc414 0%,#ff6b3514 100%);
+	
+	 border: 2px solid var(--musium-colour-secondery);
+	 padding: 2rem;
+	
+	 position: relative;
+	overflow: hidden;
+	transition: all .3s ease;
+}
+.musium-inside-box-number {
+	 font-family: 'saiba', 'Orbitron', sans-serif;
+	
+	 font-size: 4rem;
+	font-weight: 900;
+	color: #4ecdc426;
+	
+	position: absolute;
+	top: .5rem;
+	right: 1rem;
+	z-index: 0;
+	pointer-events: none;
+}
+.aboutTheMusium h3 {
+	font-family: 'alvera-bold', 'Courier New';
+	
+	font-size: 1.8rem;
+	color: var(--musium-orange-colour);
+ 	margin-bottom: 1rem;
+	
+	position: relative;
+	 z-index: 1;
+}
+
+.aboutTheMusium p {
+ 	color: #f9f7e8;
+	
+	line-height: 1.6;
+	 position: relative;
+	z-index: 1;
+	opacity: .9;
+}

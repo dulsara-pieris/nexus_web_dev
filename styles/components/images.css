@@ -1,0 +1,73 @@
+
+/* animated images to make the background live */
+.animated-images {
+	position: fixed;
+  	/* border: 2px solid; */
+	opacity: .13;
+	z-index: 1;
+	pointer-events: none;
+	 background-repeat: no-repeat;
+	
+	 background-position: center; 
+	background-size: contain;
+}
+  /* moves up down at down scales more */
+.astronout {
+	background-image: url('../../assests/images/shape1.png');
+	 width: 800px;
+	height: 800px;
+	top:  10%;
+  	 left:  0%;
+	animation: astronout 12s ease-in-out infinite alternate;
+} 
+@keyframes astronout {
+	0% {transform: translate(0) scale(1) rotate(0deg);}
+	
+	33% {transform: translateY(56vh) scale(1.64);}
+  	66% {transform: rotate(60deg);}
+	100%{transform: translate(0) rotate(0) scale(1);}
+  }
+/* moving but with in small area added rotation than astrounot */
+.computer {
+	background-image: url('../../assests/images/shape2.png');
+	width: 450px;
+	height: 450px;
+	
+	border-color: var(--lighter-musium-orange);
+	top: 60%;
+	right:  5%;
+	 animation: old-computer 20s ease-in-out infinite alternate;
+}
+@keyframes old-computer {
+	0%{transform: translateX(3vw) translateY(0);}
+	11%{transform: translateX(0) translateY(4rem);}
+	42%{transform: rotateX(46deg);}
+	65%{transform: none;}
+	
+	79%{transform: scale(1.24);}
+	90%{transform: translateZ(-4vh);}
+}
+ 
+/* added more rotation heavily rotation and in last frames added scale */
+.disk {
+ 	 background-image: url('../../assests/images/shape3.png');
+	width: 600px;
+	height: 600px;
+	opacity: .2 !important;
+ 	
+	animation: hard_disk 10s infinite;
+	bottom:  30%;
+	left: 50%;
+}
+
+@keyframes hard_disk {
+	0%{transform: none;}
+ 	12%{transform: rotateZ(58deg);}
+	31%{transform: rotateY(43deg);}
+	45%{transform: none;}
+	
+	67%{transform: rotateX(42deg);}
+	87%{transform: scale(0.68);}
+}
+/* for optimization on old hardware */
+.astronout,.computer,.disk {will-change: transform;}
