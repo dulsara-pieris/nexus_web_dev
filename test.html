@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Music Test</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: #34fff1;
+        font-family: monospace;
+        font-size: 2rem;
+    }
+</style>
+</head>
+<body>
+<audio id="bgMusic" autoplay muted>
+    <source src="assests/sounds/click.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        music.muted = false;
+    }, 100); // small delay
+});
+</script>
+</body>
+</html>
