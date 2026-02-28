@@ -38,6 +38,7 @@ body {
 	color: #f9f7e8;
 	overflow-x: hidden;/*for small monitors the aimated images are overflowing so fixed it*/
 	cursor: none;
+	background-color: #212121;
  }
 
  
@@ -48,10 +49,12 @@ body::before {
 	background-image: url('../assests/images/scanlines.png');
 	pointer-events: none;
 	content: "";
+	z-index: 9999;
  }
 /* overlay to make thee center bit greanish bit black and further part blackish */
 body::after {
-	background: radial-gradient( ellipse at center, #053e00 0%,#0f0f0f 58%);
+	background:radial-gradient(ellipse 140% 100% at center,rgba(0, 90, 0, 0.25) 0%,rgba(0, 0, 0, 0.95) 75%), 
+	radial-gradient(ellipse at center,rgba(0, 255, 0, 0.05) 0%,transparent 60%);
 	content: '';
 	position: fixed;
  	top: 0;
@@ -103,6 +106,23 @@ body::after {
 	from { opacity:0.75; transform:scale(1); }
 	to { opacity:0; transform:scale(0); }
   }
+
+
+
+.crt-overlay {
+        pointer-events: none;
+         position: fixed;
+        inset: 0;
+        background: #1918181a;
+        animation: crtoverlay 0.2s infinite;
+        z-index: 99991;
+}
+
+@keyframes crtoverlay {
+        0% { opacity: 0.1; }
+        50% { opacity: 1; }
+        100% { opacity: 0.1; }
+}
 
 
 /* making the web site responsive */

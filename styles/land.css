@@ -22,15 +22,16 @@
 	line-height: 1.1;
 	 background-image: url('../assests/images/h1bg.gif');
 	backdrop-filter: grayscale();
-	background-size: cover;
+	 background-size: cover;
 	background-position: -50%;
-	color: transparent; /*for firefox and zen*/
+	  color: transparent; /*for firefox and zen*/
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	-moz-text-fill-color: transparent; /* fallbak for firefox and zen browser*/
  	
 	text-shadow: 0 0 10px #ffea004d, 0 0 20px #ff6b3533;
 	-webkit-text-stroke: 3px var(--musium-orange-colour); 
+	z-index: 2000;
 	/* text-shadow: 5px 5px 1px #ff00ff, 10px 10px 1px #0f0, 15px 15px 1px var(--musium-orange-colour); */
 }
 

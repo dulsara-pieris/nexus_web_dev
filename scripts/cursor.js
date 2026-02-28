@@ -1,7 +1,7 @@
 // Fake cursor to follow the and the real cursor cannot be seen
 
 const cursor = document.getElementById("cursor");
-const TRAIL_TIME = 500;
+const TRAIL_TIME = 300;//cursor trail thing vanish time
 
 document.addEventListener("mousemove", e => {
         // Move fake cursor
@@ -10,6 +10,8 @@ document.addEventListener("mousemove", e => {
         createTrail(e.pageX, e.pageY);
 });
 
+
+//creates trails that moves with the fake cursor
 function createTrail(x, y) {
         const dot = document.createElement("div");
         dot.className = "trail";

@@ -54,9 +54,9 @@
 	opacity: .8;
 }
 #typewriter {
-	position: absolute;
-	 top: 10%;
-	left: 5%;
+	position: relative;
+	 top: 10% !important;
+	left: 5% !important;
 
 	font-size: 1.7rem;
 	line-height: 1.4;
