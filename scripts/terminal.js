@@ -14,7 +14,7 @@ font.load().then((loadedFont) => {
         document.fonts.add(loadedFont);
 
         // Initialize terminal
-        const term = new Terminal({fontFamily: '"alvera-bold", monospace',fontSize: 24,theme: { background: "#00000000",foreground: "#00ffcc",cursor: "#ff4704",},cursorBlink: true,});
+        const term = new Terminal({fontFamily: '"alvera-bold", monospace',fontSize: 20,theme: { background: "#00000000",foreground: "#00ffcc",cursor: "#ff4704",},cursorBlink: true,});
 
         // Fit addon to auto-resize
         const fitAddon = new FitAddon.FitAddon();

@@ -137,13 +137,23 @@ h1, h2, h3, a {text-shadow:0 0 4px rgba(0,255,0,0.6), 0 0 10px rgba(0,255,0,0.3)
 	}
 	nav {gap: 1.5rem;}
 
-	.landing-section h1 { font-size: 3rem;}
+	.landing-section h1 { font-size: 3.5rem !important;}
 	.landing-section p {font-size: 1rem;}
 	.section-title {font-size: 2rem;}
 	
 	.musium-inside { padding: 3rem 2rem;}
-	.special-events-timeline:nth-child(odd) {left: 0;}
-	.special-events-timeline:nth-child(even) {left: 0;}
+	.timeline::before{
+		position: relative !important;
+		right: 100% !important;
+	}
+	.special-events-timeline:nth-child(odd) {
+		position: relative;
+		left: 5% !important;
+	}
+	.special-events-timeline:nth-child(even) {
+		position: relative;
+		left: 5% !important;
+	}
 	.special-events-timeline {
 
 		margin-bottom: 30px;
@@ -154,4 +164,5 @@ h1, h2, h3, a {text-shadow:0 0 4px rgba(0,255,0,0.6), 0 0 10px rgba(0,255,0,0.3)
 		position: absolute;
 		right: 10px;
 	}
+	#terminal{height: 87vh !important;}
 }
