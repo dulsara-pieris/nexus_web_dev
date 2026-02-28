@@ -6,7 +6,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: #000;
-	font-family: 'alvera-bold', 'Courier New';
+	font-family: 'alvera-bold', 'Courier New' !important;
 	color: #00ff9f;
 	text-shadow: 0 0 5px #00ff9f;
 	overflow: hidden;
@@ -57,6 +57,7 @@
 	position: relative;
 	 top: 10% !important;
 	left: 5% !important;
+	font-family: 'alvera-bold', 'Courier New' !important;
 
 	font-size: 1.7rem;
 	line-height: 1.4;

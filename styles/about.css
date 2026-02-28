@@ -55,10 +55,10 @@
 	
 	 font-size: 4rem;
 	font-weight: 900;
-	color: #4ecdc426;
+	color: #4ecdc562;
 	
 	position: absolute;
-	top: .5rem;
+	top: .8rem;
 	right: 1rem;
 	z-index: 0;
 	pointer-events: none;
@@ -77,8 +77,8 @@
 .aboutTheMusium p {
  	color: #f9f7e8;
 	
-	line-height: 1.6;
+	line-height: 1.9 !important;
 	 position: relative;
 	z-index: 1;
-	opacity: .9;
+	opacity: 1;
 }

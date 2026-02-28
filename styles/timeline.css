@@ -34,7 +34,12 @@
 	background: #1f1f1f;
 	border: 2px solid var(--musium-colour-secondery);
 	font-family: 'Orbitron';
-	 margin-bottom: 100px;
+	 margin-bottom: 20px;
+}
+small {
+	font-size: 1.1rem;
+	color: #fff;
+	padding: 30px;
 }
 .special-events-timeline h1{
 	font-size: 1.8rem;

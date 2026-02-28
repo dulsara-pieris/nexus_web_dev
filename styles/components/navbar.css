@@ -22,7 +22,7 @@ header {
 	position: relative !important;
 	width: 100px !important;
 	width: 100px !important;
-	background: url('images/h1bg.gif');
+	/* background: url('images/h1bg.gif'); */
  	background-color: #fff;/*for testing only*/
 }
 nav {

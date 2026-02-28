@@ -3,7 +3,6 @@
 @import url('components/boot.css');
 @import url('components/images.css');
 @import url('components/navbar.css');
-@import url('components/transition.css');
 
 /* colours used mainly in the musium web website promary colour is black but changes bit in the time so dosen't include */
 :root {
@@ -14,7 +13,7 @@
 
 /*custom fonts with retro futurastic look*/
 
-/* orbitorn for pharagraphs and things fututrastic not pixalated readble */
+/* orbitorn for pharagraphs and things fututrastic not pixalated and it's readble */
 @font-face {font-family: 'Orbitron';src: url('../assests/fonts/orbitron/Orbitron-VariableFont_wght.ttf');}
 
 
@@ -30,7 +29,6 @@
 	margin: 0;
 	padding: 0;
 	 box-sizing: border-box;
- 	image-rendering: pixelated !important;
 }
 html {scroll-behavior: smooth;}
 body {
@@ -39,6 +37,7 @@ body {
 	overflow-x: hidden;/*for small monitors the aimated images are overflowing so fixed it*/
 	cursor: none;
 	background-color: #212121;
+	font-family: 'orbitron', 'Courier New';;
  }
 
  
@@ -86,6 +85,9 @@ body::after {
  	transition: transform 0.0001s ease;
 	
 }
+p {
+	z-index: 999;
+}
   /* Trail dots */
 .trail {
 	position:absolute;
@@ -123,7 +125,7 @@ body::after {
         50% { opacity: 1; }
         100% { opacity: 0.1; }
 }
-h1, h2, h3, p {text-shadow:0 0 4px rgba(0,255,0,0.6), 0 0 10px rgba(0,255,0,0.3);}
+h1, h2, h3, a {text-shadow:0 0 4px rgba(0,255,0,0.6), 0 0 10px rgba(0,255,0,0.3);}
 
 /* making the web site responsive */
 @media (max-width: 768px) {
