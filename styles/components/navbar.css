@@ -44,4 +44,4 @@ nav a {
 	-webkit-user-drag: none;
 }
 
-nav a:hover {color: var(--lighter-musium-orange);}
+nav a:hover {color: var(--lighter-musium-orange); transition: all .3s ease; transform: translateY(-2px);}
