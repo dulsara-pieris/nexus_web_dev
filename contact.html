@@ -3,12 +3,17 @@
         <head>
                 <meta charset="UTF-8" />
                 <title>contact - cli</title>
+                <link rel="stylesheet" href="https://unpkg.com/xterm@5.3.0/css/xterm.css" />
                 <link rel="stylesheet" href="styles/contact.css" />
-		<link rel="stylesheet" href="styles/base.css">
-                <link rel="icon" href="assests/images/favicon.png" type="image/x-icon">
+                <link rel="stylesheet" href="styles/base.css" />
+                <link
+                        rel="icon"
+                        href="assests/images/favicon.png"
+                        type="image/x-icon"
+                />
         </head>
         <body>
-                <div class="grid-bg"></div> 
+                <div class="grid-bg"></div>
                 <div id="cursor"></div>
                 <header>
                         <div class="logo"></div>
@@ -19,23 +24,18 @@
                                 <a href="timeline.html">Timeline</a>
                         </nav>
                 </header>
-				
+
                 <div class="crt-overlay"></div>
 
                 <audio src="./assests/sounds/click.mp3" preload="auto"></audio>
 
                 <div id="terminal"></div>
 
-                <!-- Xterm.js core -->
-                <script src="https://cdn.jsdelivr.net/npm/xterm@6.4.0/lib/xterm.js"></script>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@6.4.0/css/xterm.css">
+                <script src="https://unpkg.com/xterm@5.3.0/lib/xterm.js"></script>
+                <script src="https://unpkg.com/xterm-addon-fit@0.7.0/lib/xterm-addon-fit.js"></script>
 
-                <!-- Xterm Fit Addon for resizing stuff -->
-                <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.7.0/lib/xterm-addon-fit.js"></script>
-
-                
                 <script src="scripts/terminal.js"></script>
-		<script src="scripts/cursor.js"></script>
-		<script src="scripts/sounds.js"></script>
+                <script src="scripts/cursor.js"></script>
+                <script src="scripts/sounds.js"></script>
         </body>
 </html>
