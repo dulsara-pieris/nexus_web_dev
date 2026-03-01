@@ -8,14 +8,19 @@ let name = localStorage.getItem("musium-name") || "guest";
 // Sound effect for errors
 const error = new Audio("../assests/sounds/freesound_community-windows-error-sound-effect-35894.mp3"
 );
-
-// Load font
-font.load().then((loadedFont) => {
+        //load stuff
+        font.load().then((loadedFont) => {
         document.fonts.add(loadedFont);
-
-        // Initialize terminal
-        const term = new Terminal({fontFamily: '"alvera-bold", monospace',fontSize: 20,theme: { background: "#00000000",foreground: "#00ffcc",cursor: "#ff4704",},cursorBlink: true,});
-
+        }).catch((err) => {
+        console.warn("Font failed to load, terminal will use fallback font.", err);
+        }).finally(() => {
+        // Initialize terminal no matter what
+        const term = new Terminal({
+                fontFamily: '"alvera-bold", monospace',
+                fontSize: 20,
+                theme: { background: "#00000000", foreground: "#00ffcc", cursor: "#ff4704" },
+                cursorBlink: true,
+        });
         // Fit addon to auto-resize
         const fitAddon = new FitAddon.FitAddon();
         term.loadAddon(fitAddon);
