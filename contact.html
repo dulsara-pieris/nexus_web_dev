@@ -3,7 +3,6 @@
         <head>
                 <meta charset="UTF-8" />
                 <title>contact - cli</title>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
                 <link rel="stylesheet" href="styles/contact.css" />
 		<link rel="stylesheet" href="styles/base.css">
                 <link rel="icon" href="assests/images/favicon.png" type="image/x-icon">
@@ -27,11 +26,17 @@
 
                 <div id="terminal"></div>
 
-                <script src="node_modules/xterm/lib/xterm.js"></script>
-                <script src="node_modules/xterm-addon-fit/lib/xterm-addon-fit.js"></script>
+
 
                 <script src="scripts/terminal.js"></script>
-				<script src="scripts/cursor.js"></script>
-				<script src="scripts/sounds.js"></script>
+		<script src="scripts/cursor.js"></script>
+		<script src="scripts/sounds.js"></script>
+
+                <!-- Xterm.js core -->
+                <script src="https://cdn.jsdelivr.net/npm/xterm@6.4.0/lib/xterm.js"></script>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@6.4.0/css/xterm.css">
+
+                <!-- Xterm Fit Addon for resizing stuff -->
+                <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.7.0/lib/xterm-addon-fit.js"></script>
         </body>
 </html>
