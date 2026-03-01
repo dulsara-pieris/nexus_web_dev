@@ -62,6 +62,7 @@
 	right: 1rem;
 	z-index: 0;
 	pointer-events: none;
+	opacity: .4;
 }
 .aboutTheMusium h3 {
 	font-family: 'alvera-bold', 'Courier New';

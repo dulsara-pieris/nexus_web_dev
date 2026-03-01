@@ -19,7 +19,7 @@
 
  /* Used only in the h1 on the landing page because hard to read but give very retro feel */
 @font-face {font-family: 'saiba';src: url('../assests/fonts/saiba-45/SAIBA-45.ttf');}
-
+@font-face {font-family: 'game'; src: url('../assests/fonts/game/Game\ Paused\ DEMO.otf');}
 
 /* 8Bit font used circle because the gap can be seen square one cannot see the gap in the sqauares */
 @font-face {font-family: 'alvera-bold';	src: url('../assests/fonts/alvera/AlveraDEMO-BoldCircle.ttf');}
