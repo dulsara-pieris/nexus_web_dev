@@ -53,7 +53,7 @@ window.addEventListener("load", () => {
          const interval = setInterval(() => {
                   percent += 10;
                    const blocks = "█".repeat(percent / 10);
-                    const dashes = "-".repeat(10 - percent / 10);
+                    const dashes = "_".repeat(10 - percent / 10);
                   
                   container.textContent = `     ${blocks}${dashes}  ${percent}%`;
 
