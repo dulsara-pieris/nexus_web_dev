@@ -66,10 +66,11 @@ const error = new Audio("../assests/sounds/freesound_community-windows-error-sou
                                         term.writeln("Usage: setname <name>");
                                 }
                         } else if (command === "sendemail") {
-
-
-                                const subject = args[1] || "No subject";
-                                const bodyMessage = args.slice(2).join(" ") || "No message";
+                                //optional quoted subject: sendemail "hello there" message
+                                const raw = input.replace(/^sendemail\s*/i, "");
+                                const quoted = raw.match(/^(["'])(.*?)\1\s*(.*)$/);
+                                const subject = quoted ? (quoted[2] || "No subject") : (args[1] || "No subject");
+                                const bodyMessage = quoted ? (quoted[3] || "No message") : (args.slice(2).join(" ") || "No message");
 
                                 // Include username in email
                                 const fullBody = `From: ${name}\n\n${bodyMessage}`;

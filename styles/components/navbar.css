@@ -45,3 +45,5 @@ nav a {
 }
 
 nav a:hover {color: var(--lighter-musium-orange); transition: all .3s ease; transform: translateY(-2px);}
+
+nav a:focus-visible {outline: 2px solid var(--musium-colour-secondery); outline-offset: 4px;}

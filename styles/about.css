@@ -21,16 +21,31 @@
 
 
 /* Slight horizontal color shifts */
+.section-title {
+	position: relative;
+}
+.section-title::before,
+.section-title::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	pointer-events: none;
+}
 .section-title::before {
 	left: 2px;
 	clip: rect(0, auto, 60%, 0);
 	animation: glitchTop .5s infinite linear alternate-reverse;
+	color: var(--musium-orange-colour);
 }
 
 .section-title::after {
 	left: -2px;
 	clip: rect(40%, auto, 100%, 0);
 	animation: glitchBottom .6s infinite linear alternate-reverse;
+	color: var(--musium-colour-secondery);
 }
 
 
